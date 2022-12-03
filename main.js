@@ -9,6 +9,9 @@ play.addEventListener("click", e => {
  // memainkannya musik
  audio.play()
  play.innerHTML = `<a href="/demons v jar hearts.mp3"  download="">unduh</a>`
+
+ document.querySelector(".lirik").innerHTML = "memuat!!!"
+
  // panggil fungsi goo untuk lirik
  goo(true)
 })
