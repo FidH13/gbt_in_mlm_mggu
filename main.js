@@ -7,7 +7,6 @@ let play = document.querySelector(".main")
 // ketika tombol play di mainkan
 play.addEventListener("click", e => {
  // memainkannya musik
- audio.play()
  play.innerHTML = `<a href="/demons v jar hearts.mp3"  download="">unduh</a>`
 
  document.querySelector(".lirik").innerHTML = "memuat!!!"
@@ -19,6 +18,8 @@ play.addEventListener("click", e => {
 // fungsi ambil data dan lirik
 async function goo(mulai) {
  // ambil dara
+  audio.play()
+
  return await fetch("/lirik").then(data => data.text()).then(data => {
   // tiap baris ubah ke array
   let lirik = data.trim().split("\n")
